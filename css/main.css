@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+.forest{
+    background-image: url(../img/bacground-image.webp);
+    background-repeat: repeat-x;
+    height: 90%;
+}
+.road{
+    background-image: url(../img/highway.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: bottom;
+}
+.car{   
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    animation: car 8s linear infinite;
+    height: 100vh;
+
+}
+/* .car::before{
+    content: '';
+    background-image: url(../img/highway.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    width: 100%;
+} */
+/* .road{
+    animation: road 3s linear infinite;
+}
+@keyframes road{
+    100%{
+        width: 100%;
+        }
+    } */
+@keyframes car{
+    100%{
+        transform: translateY(-5px);
+        transform: translateX(-100vw);
+    }
+    50%{
+        transform: translateY(5px);
+
+    }
+    0%{
+        transform: translateY(-5px);
+        
+    }
+}
+.wheel{
+    position: absolute;
+    bottom: 0;
+}
+.start-wheel{
+    position: absolute;
+    animation: start-wheel 2s ease infinite 4s ;
+    left: -320px;
+    bottom: 0;
+}
+.end-wheel{
+    animation: end-wheel 2s ease infinite 4s;
+}
+@keyframes start-wheel{
+    100%{transform: rotate(390deg);
+    }  
+}
+@keyframes end-wheel{
+    100%{
+        transform:rotate(390deg);
+    }
+}
+
